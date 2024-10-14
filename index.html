@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>REN-先生</title>
+    <link rel="apple-touch-icon" sizes="180x180" href="assets/favicon/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="assets/favicon/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="assets/favicon/favicon-16x16.png">
+    <link rel="stylesheet" href="styles.css">
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Klee+One:wght@400;600&family=M+PLUS+1+Code:wght@100..700&display=swap');
+    </style>
+    <script src="https://kit.fontawesome.com/de133acbcb.js" crossorigin="anonymous"></script>
+</head>
+<body>
+    <div id="overlay"></div>
+
+    <!-- Heading -->
+    <div class="heading">
+        <div class="headingMenu">
+            <span><a href="index.html">REN-先生</a></span>
+        </div>
+    </div>
+
+    <!-- Contenedor de las secciones -->
+    <div id="dokkaiSection" class="mainContent main-section">
+        <!-- Contenedor de la página de inicio -->
+        <div id="startScreen"></div>
+        
+        <!-- Contenedor del cuestionario -->
+        <div class="mainPort" style="display: none;">
+            <div id="decoration"></div>
+            <div id="navigation">
+                <div id="breadcrumb"></div>
+                <div id="navigationIndicator"></div>
+            </div>
+            <div id="questions">
+                <span id="questionsTag">質問</span>
+            </div>
+            <div id="answers"></div>
+            <div id="nextQuestion"></div>
+        </div>
+    </div>
+
+    <div class="foot">
+        <div class="navigation">
+            <ul>
+                <li class="nav-link" data-section="dokkai">Dokkai</li>
+                <li class="nav-link" data-section="kanji">Kanji</li>
+                <li class="nav-link" data-section="chokai">Chokai</li>
+                <li class="nav-link" data-section="nikki">Nikki</li>
+            </ul>
+        </div>
+        <div id="footer">
+            <p>
+                Sergio A. Cruz, 2024
+                <br>v. alpha 0.0.3
+            </p>
+        </div>
+    </div>
+
+    <!-- Contenedor de la alerta -->
+    <div id="alertaPersonalizada">
+        <div class="contenidoAlerta">
+            <span id="mensajeAlerta"></span><br>
+            <span id="mensajePuntaje" style="display: none;"></span>
+            <button id="cerrarAlerta">次</button>
+            <button id="btnNextExercise">Siguente ejercicio</button>
+        </div>
+    </div>
+
+    <script type="module" src="js/main.js"></script>
+    <script type="module" src="js/alerta.js"></script>
+    <script type="module" src="js/dokkai/dokkaiManager.js"></script>
+    <script type="module" src="js/dokkai/dokkaiUI.js"></script>
+</html>

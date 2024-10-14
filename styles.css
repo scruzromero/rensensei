@@ -1,0 +1,394 @@
+/* Variables CSS para colores y fuentes */
+:root {
+    --color-extra-light: #fcf1f3;
+    --color-lighter: #fae0e4;
+    --color-light:#f7cad0;
+    --color-main-light: #fbb1bd;
+    --color-main-normal: #ff85a1;
+    --color-main-dark: #ff5c8a;
+    --color-dark: #ff0a54;
+    --color-darker: #EF0040;
+    --color-extra-dark: #D40040;
+    --text: #2B000D;
+    --highlight-text: #ff0a54;
+    --color-blue: #2DBBED;
+    --color-yellow: #EDE22D;
+    --font: 'Klee One', 'Yu Gothic', Helvetica, Arial, sans-serif;
+    --font-eng: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    --font-ui: 'M PLUS 1 Code', monospace; 
+}
+
+/* Estilos generales */
+body {
+    background-color: white;
+    background-image: radial-gradient(circle, rgba(223, 0, 201, 0.25) 1px, rgba(223, 0, 201, 0) 1px);
+    background-size: 15px 15px;
+    font-size: 16px;
+    font-family: var(--font);
+    margin: 0;
+}
+
+p {
+    margin: 0;
+}
+
+h1,
+h2 {
+    font-size: 1.25rem;
+    padding: 1em;
+    color: white;
+    margin: 0;
+}
+
+/* Estilos del heading */
+.heading {
+    display: flex;
+    justify-content: space-between;
+    text-align: center;
+    font-family: var(--font-ui);
+    border-bottom: 2px solid black;
+    background-color: var(--color-extra-light);
+}
+
+.headingMenu a {
+    text-decoration: none;
+    color: var(--color-lighter);
+}
+
+.headingMenu {
+    background-color: var(--color-dark);
+    border-right: 2px solid black;
+    padding-top: 5px;
+    padding-bottom: 5px;
+    padding-left: 10px;
+    padding-right: 25px;
+}
+
+.headingIcon {
+    padding: 5px;
+}
+
+.mainContent {
+    display: grid;
+    place-items: center;
+}
+
+/* Estilos del footer */
+.foot {
+    display: flex;
+    justify-content: space-between;
+    align-content: center;
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+}
+
+.navigation {
+    align-content: center;
+    font-size: 0.8rem;
+    font-family: var(--font-ui);
+    background-color: var(--color-dark);
+    border: 2px solid black;
+    cursor: pointer;
+}
+
+.navigation ul {
+    margin: 0;
+    padding: 0;
+    list-style-type: none;
+}
+
+.navigation li {
+    display: inline;
+    text-align: center;
+    padding: 0 0.3rem;
+    color: white;
+}
+
+#footer {
+    font-size: 0.75rem;
+    font-family: var(--font-ui);
+    color: var(--color-main-dark);
+    align-items: right;
+    text-align: right;
+    width: 150px;
+}
+
+/* Estilos del cuestionario */
+#startScreen,
+.mainPort {
+    margin: 2em 2em 0 2em;
+    background-color: var(--color-extra-light);
+    border: 2px solid black;
+    max-width: 700px;
+}
+
+#startScreen {
+    text-align: center;
+}
+
+.windowDecor {
+    background-color: white;
+    border-bottom: 2px solid black;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.windowCloseIcon {
+    cursor: pointer;
+    margin: 0.5em;
+    font-size: 1.2rem;
+}
+
+.windowStartTitle {
+    font-size: 1rem;
+    font-family: var(--font-ui);
+    margin-right: 0.5em;
+}
+
+.windowStartTitleIcon {
+    font-size: 1rem;
+    margin-left: 0.5em;
+    margin-right: 0.5em;
+}
+
+#startScreenMainContent {
+    display: grid;
+    place-items: center;
+}
+
+#sessionConfigMenu {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    margin: 1.2rem;
+    padding: 1rem;
+    max-width: 350px;
+    border: 2px solid black;
+    background-color: white;
+}
+
+.startScreenLabel {
+    font-family: var(--font-ui);
+    font-weight: 500;
+    font-size: 0.8rem;;
+    color: var(--color-darker);
+    text-align: left;
+    margin-right: 15px;
+}
+
+#difficultySelector,
+#levelSelector,
+#exercisesCountSelector {
+    margin: 0.5em;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+#difficultySelect,
+#levelSelect,
+#exercisesCountSelect {
+    text-align: right;
+    background-color: white;
+    border: 2px solid black;
+    border-radius: 0px;
+    padding: 0.2rem;
+    min-width: 100px;
+}
+
+.instrucciones {
+    font-size: 1.2rem;
+    color: var(--text);
+    margin: 1.2rem 1.2rem 0 1.2rem;
+}
+
+.instruccionesLectura {
+    font-size: 1rem;
+    color: var(--color-darker);
+    margin-bottom: 1em;
+}
+
+.instrucciones,
+.instruccionesLectura {
+    font-family: var(--font-eng);
+    text-align: center;
+    padding: 0.5em;
+}
+
+.textoEjercicio {
+    font-weight: 400;
+    font-size: 1.3rem;
+    font-family: var(--font);
+    color: var(--text);
+    text-align: left;
+    padding: 0 1em;
+}
+
+#questions {
+    padding: 1em;
+    font-size: 1.2rem;
+    color: var(--highlight-text);
+    text-align: center;
+}
+
+#questionsTag {
+    text-align: center;
+    font-weight: 400;
+    font-size: 0.8rem;
+    color: var(--highlight-text);
+    line-height: 2em;
+}
+
+.preguntaTexto {
+    font-weight: 900;
+}
+
+#navigation {
+    color: var(--highlight-text);
+    font-size: 0.8rem;
+    padding: 1.2em;
+    text-align: right;
+}
+
+#breadcrumb {
+    margin-bottom: 0.5em;
+    font-weight: 300;
+    font-family: var(--font-eng);
+}
+
+#navigationIndicator {
+    font-weight: 400;
+    font-family: var(--font-eng);
+}
+
+.opcion {
+    font-size: 1.15em;
+    font-weight: 600;
+    font-family: var(--font);
+    display: block;
+    padding: 0.75em 1em;
+    color: var(--color-dark);
+    background-color: white;
+    border: 2px solid;
+    border-color: black;
+    transition: 0.4s ease;
+    cursor: pointer;
+    margin: 0 auto 1em auto;
+    max-width: 100%;
+}
+
+.opcion:hover {
+    background-color: var(--color-dark);
+    color: var(--color-extra-light);
+}
+
+.startButton {
+    font-size: 0.75em;
+    font-weight: 600;
+    font-family: var(--font-ui);
+    color: var(--color-dark);
+    background-color: white;
+    border: 2px solid black;
+    cursor: pointer;
+    display: block;
+    padding: 0.75em 1em;
+    margin: 0.6em auto 1.8em auto;
+    max-width: 100%;
+    box-shadow: 1px 1px 0px 0px black, 2px 2px 0px 0px black;
+    position: relative;
+    user-select: none;
+    touch-action: manipulation;
+}
+
+.startButton:hover {
+    background-color: var(--color-dark);
+    color: white;
+    border: 2px solid black;
+    box-shadow: 1px 1px 0px 0px black, 2px 2px 0px 0px black;
+    position: relative;
+    user-select: none;
+    touch-action: manipulation;
+}
+
+.startButton:active {
+    box-shadow: 0px 0px 0px 0px;
+    top: 2px;
+    left: 2px;
+}
+
+#answers {
+    padding: 1em;
+    color: var(--highlight-text);
+    text-align: center;
+}
+
+#nextQuestion {
+    padding: 0 1em;
+}
+
+#endMessage {
+    padding: 1em 0;
+    color: var(--color-light);
+}
+
+#overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(255, 255, 255, 0.7);
+    display: none;
+    z-index: 1000;
+}
+
+#alertaPersonalizada {
+    display: none;
+    position: fixed;
+    left: 50%;
+    top: 25%;
+    transform: translate(-50%, -25%);
+    background-color: var(--color-extra-light);
+    padding: 1em;
+    border: 2px solid black;
+    z-index: 1100;
+}
+
+#mensajeAlerta {
+    display: inline-block;
+    font-size: 1.25rem;
+    font-weight: 500;
+    font-family: var(--font-eng);
+    margin-bottom: 15px;
+    color: var(--color-dark);
+}
+
+#mensajePuntaje {
+    font-size: 1rem;
+    color: var(--highlight-text);
+}
+
+.contenidoAlerta {
+    text-align: center;
+}
+
+#cerrarAlerta,
+#btnNextExercise {
+    display: none;
+    padding: 5px 10px;
+    border: 2px solid black;
+    background-color: white;
+    color: var(--color-dark);
+    cursor: pointer;
+    transition: 0.3s ease;
+    margin-left: 50%;
+    transform: translateX(-50%);
+}
+
+#cerrarAlerta:hover,
+#btnNextExercise:hover {
+    background-color: var(--color-dark);
+    color: white;
+}
